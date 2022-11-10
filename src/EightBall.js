@@ -27,9 +27,8 @@ const EightBallAnswers = () => {
         { msg: "Outlook not so good.", color: "red" },
         { msg: "Very doubtful.", color: "red" },
     ]
-
     const rando = Math.floor(Math.random() * answer.length);
-    return rando;
+    return <button onClick={rando}> Clicker </button>
     }
 }
 
