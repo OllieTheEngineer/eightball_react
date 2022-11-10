@@ -4,7 +4,6 @@ const EightBall = (props) => {
     const [msg, setMsg] = useState("Think of a Question.");
     const [color, setColor] = useState("black");
 
-const EightBallAnswers = () => {
    let answer = [
         { msg: "It is certain.", color: "green" },
         { msg: "Without a doubt.", color: "green" },
@@ -30,6 +29,6 @@ const EightBallAnswers = () => {
     const rando = Math.floor(Math.random() * answer.length);
     return <button onClick={rando}> Clicker </button>
     }
-}
+    
 
 export default EightBall;
