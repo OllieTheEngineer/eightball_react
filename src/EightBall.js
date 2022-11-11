@@ -1,10 +1,30 @@
 import React, { useState } from "react";
+import "./App.css";
+
+// const rando = Math.floor(Math.random() * answers.length);
+
+const rando = (array) => {
+    const randoIndex = Math.floor(Math.random() * array.length);
+    return array[randoIndex];
+}
 
 const EightBall = (props) => {
     const [msg, setMsg] = useState("Think of a Question.");
-    const [color, setColor] = useState("black");
+    const [color, setColor] = useState("purple");
 
-   let answer = [
+    const clickMe = () => {
+        const { msg, color } = rando(props.answers)
+        setMsg(msg);
+        setColor(color);
+    }
+    return (<span>
+        <button className="EightBall" style={{background: color}} onClick={clickMe}> Click Me</button>
+        <b> {msg} </b>
+        </span>   
+    )
+
+   EightBall.defaultProps = {
+     answers:[
         { msg: "It is certain.", color: "green" },
         { msg: "Without a doubt.", color: "green" },
         { msg: "It is decidedly so.", color: "green" },
@@ -26,9 +46,9 @@ const EightBall = (props) => {
         { msg: "Outlook not so good.", color: "red" },
         { msg: "Very doubtful.", color: "red" },
     ]
-    const rando = Math.floor(Math.random() * answer.length);
-    return <button onClick={rando}> Clicker </button>
-    }
-    
+}
 
+};
+
+  
 export default EightBall;
