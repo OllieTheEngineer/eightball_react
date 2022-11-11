@@ -17,11 +17,10 @@ const EightBall = (props) => {
         setMsg(msg);
         setColor(color);
     }
-    return (<span>
-        <button className="EightBall" style={{background: color}} onClick={clickMe}> Click Me</button>
-        <b> {msg} </b>
-        </span>   
+    return (
+        <button className="EightBall" style={{background: color}} onClick={clickMe}> {msg} </button> 
     )
+
 
    EightBall.defaultProps = {
      answers:[
