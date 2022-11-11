@@ -21,7 +21,7 @@ const EightBall = (props) => {
         <button className="EightBall" style={{background: color}} onClick={clickMe}> {msg} </button> 
     )
 
-
+}
    EightBall.defaultProps = {
      answers:[
         { msg: "It is certain.", color: "green" },
@@ -45,9 +45,7 @@ const EightBall = (props) => {
         { msg: "Outlook not so good.", color: "red" },
         { msg: "Very doubtful.", color: "red" },
     ]
-}
-
 };
 
-  
+
 export default EightBall;
